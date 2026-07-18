@@ -39,7 +39,9 @@
    },
  ]
  
- export default function Projects() {
+ import { useState } from 'react'
+
+export default function Projects() {
    return (
      <section className="projects section" id="projects">
        <div className="section-header">
@@ -59,7 +61,7 @@
                <p className="project-desc">{p.desc}</p>
                {p.achievement && <p className="project-achievement">{p.achievement}</p>}
                {p.pdf && (
-                 <a href={p.pdf} target="_blank" rel="noopener noreferrer" className="project-pdf-btn">
+                 <a href={p.pdf} target="_blank" rel="noopener noreferrer" className="project-pdf-btn" onClick={() => setLoadingPdf(true)}>
                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                    {p.pdfLabel}
                  </a>
