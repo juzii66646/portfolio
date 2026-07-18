@@ -24,7 +24,7 @@ jobs:
           cache: npm
       - run: npm install
       - run: npm run build -- --base=/portfolio/
-      # configure-pages skipped
+      - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
