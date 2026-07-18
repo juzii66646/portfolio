@@ -1,0 +1,15 @@
+ node_modules
+ dist
+ .vite
+ *.log
+ tunnel.txt
+ tunnel_url.txt
+ url.txt
+ url2.txt
+ tun_url.txt
+ tun_log.txt
+ ssh_log.txt
+ serveo_url.txt
+ tunnel3.txt
+ update.py
+ update2.py
