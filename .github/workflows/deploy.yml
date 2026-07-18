@@ -22,9 +22,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
-      - run: npm run build -- --base=./
-      - uses: actions/configure-pages@v4
+      - run: npm install
+      - run: npm run build -- --base=/portfolio/
+      # configure-pages skipped
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
