@@ -16,7 +16,7 @@ export default function About() {
       <div className="about-grid">
         <div className="about-avatar-col">
           <div className="about-avatar">
-            <img src="/photo.png" alt="头像" className="avatar-img" />
+            <img src="./photo.png" alt="头像" className="avatar-img" />
           </div>
           <div className="about-contact">
             <h3>联系方式</h3>

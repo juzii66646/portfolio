@@ -16,7 +16,7 @@
      desc: '将肉桂加工后的废料资源化利用，制成新型中草药饲料用于林下养殖"肉桂鸡"，实现农业废弃物价值转化。主导完成5款以上同类产品竞品分析，通过问卷收集50+份用户数据并输出调研报告，基于调研结论设计产品方案并输出50+页商业计划书及路演PPT。',
      accent: '#7c5cfc',
      achievement: '获第九届"创客中国"生物医药大赛创客组全国50强',
-     pdf: '/nangui.pdf',
+     pdf: './nangui.pdf',
      pdfLabel: '查看PPT',
    },
    {
@@ -34,7 +34,7 @@
      tags: ['项目路演PPT', '商业计划'],
      desc: '创新创业项目完整展示PPT，包含项目概述、市场分析、产品方案等内容。',
      accent: '#f59e0b',
-     pdf: '/niuzhuan.pdf',
+     pdf: './niuzhuan.pdf',
      pdfLabel: '查看PPT',
    },
  ]
