@@ -340,6 +340,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 25%;
   }
  .avatar-placeholder { color: var(--text-muted); opacity: 0.5; }
  .about-contact h3,
