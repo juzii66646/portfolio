@@ -30,6 +30,8 @@
      tags: ['AI工具评测', '提示词工程', '内容输出', '逻辑拆解'],
      desc: '日常深度使用Codex、Claude等AI工具辅助方案撰写、文档整理、竞品调研和逻辑拆解。通过结构化提示词（Prompt Engineering）高效引导AI输出，探索AI在内容创作、信息分析、文档生成等工作流中的最佳实践，有丰富的实际使用场景和持续研究习惯。',
      accent: '#06b6d4',
+     pdf: './ai-insights.html',
+     pdfLabel: 'AI工具使用心得',
    },
    {
      id: 4,
