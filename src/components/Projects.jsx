@@ -7,9 +7,9 @@
      tags: ['需求文档', '业务流程图', '30+测试用例', '2项功能迭代'],
      desc: '基于Spring Boot + MyBatis + MySQL + ECharts的医疗废物全流程管理平台，覆盖科室收集、入库暂存、装车运出全生命周期，含台账管理、设备监控、数据统计大屏等模块。统筹5人团队从需求调研到上线全流程，设计执行30+条测试用例覆盖核心场景，推动2项功能迭代，核心功能上线通过率100%。',
      accent: '#4f8cff',
-     pdf: '/PRD.docx',
+     pdf: './PRD.docx',
      pdfLabel: '需求分析文档',
-     prototype: '/prototype_light.html',
+     prototype: './prototype_light.html',
      prototypeLabel: '原型设计',
    },
    {
