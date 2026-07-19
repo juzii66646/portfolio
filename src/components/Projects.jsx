@@ -66,6 +66,11 @@ export default function Projects() {
                    {p.pdfLabel}
                  </a>
                )}
+               {p.prototype && (
+                 <a href={p.prototype} target="_blank" rel="noopener noreferrer" className="project-pdf-btn">
+                   {p.prototypeLabel}
+                 </a>
+               )}
                <div className="project-tags">
                  {p.tags.map(tag => (
                    <span key={tag} className="project-tag">{tag}</span>
