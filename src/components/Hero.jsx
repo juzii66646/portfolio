@@ -9,7 +9,7 @@
        <div className="hero-content">
          <p className="hero-badge">广东药科大学 · 计算机科学与技术专业 · 2027届</p>
          <h1 className="hero-title">
-           <span className="hero-title-line">AI研究与运营方向</span>
+           <span className="hero-title-line">AI产品和应用方向</span>
            <span className="hero-title-name">陈美焕</span>
          </h1>
          <p className="hero-subtitle">
