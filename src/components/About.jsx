@@ -37,15 +37,22 @@ export default function About() {
           <div className="about-bio">
             <h3>个人介绍</h3>
             <p>
-              广东药科大学计算机科学与技术专业2027届本科。在校期间专注AI产品与工具应用实践，
-              担任过医疗废物管理系统项目负责人，参与“南桂司晨”创新创业项目，
-              积累了从需求调研、竞品分析到系统上线的全流程经验。
+              广东药科大学计算机科学与技术专业2027届本科。在玛氏（Mars）亚太区 IT 团队实习期间，
+              独立搭建 AI Agent 智能运维系统并交付 AI 金牌话术 H5 产品 Demo，
+              积累了从需求拆解、多数据源对接到产品交付的完整经验。
             </p>
             <p>
-              日常深度使用Codex、Claude等AI工具辅助方案撰写、文档整理和逻辑拆解，
-              善于将复杂信息结构化输出。自驱力强，能快速适应快节奏环境并独立产出成果，
-              期待在AI产品和应用方向深入积累。
+              在校期间担任医疗废物管理系统项目负责人，参与“南桂司晨”创新创业项目。
+              熟悉 Python、MySQL 及 Vibe Coding，善于用 AI 工具快速把想法做成可体验的成果。
+              自驱力强，期待在 AI 产品和应用方向深入积累。
             </p>
+          </div>
+          <div className="about-experience">
+            <h3>实习经历</h3>
+            <div className="exp-item">
+              <span className="exp-date">2026.07~2026.10</span>
+              <span className="exp-role">AI Agent 运维系统开发实习生 · 广州指尖信息（外派玛氏）</span>
+            </div>
           </div>
           <div className="about-experience">
             <h3>在校经历</h3>
