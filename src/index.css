@@ -80,6 +80,26 @@
    color: var(--text-secondary);
    font-size: 1.05rem;
  }
+
+.projects-group-title {
+  max-width: var(--max-width);
+  margin: 56px auto 24px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.projects-group-title::before {
+  content: '';
+  width: 4px;
+  height: 22px;
+  border-radius: 2px;
+  background: var(--gradient);
+}
+
  
  .btn {
    display: inline-flex;
@@ -317,7 +337,7 @@
    margin: 0 auto;
    padding: 0 48px;
    display: grid;
-   grid-template-columns: 300px 1fr 280px;
+   grid-template-columns: 300px 1fr;
    gap: 48px;
  }
  .about-avatar-col {

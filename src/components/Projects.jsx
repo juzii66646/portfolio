@@ -1,4 +1,4 @@
-const projects = [
+const internshipProjects = [
   {
     id: 1,
     title: 'AI 金牌话术 · 产品 Demo',
@@ -30,6 +30,9 @@ const projects = [
     prototype: 'https://juzii66646.github.io/frontend-effects-gallery/',
     prototypeLabel: '查看网页',
   },
+]
+
+const schoolProjects = [
   {
     id: 4,
     title: '医疗废物管理系统',
@@ -56,16 +59,6 @@ const projects = [
   },
   {
     id: 6,
-    title: 'AI研究与工具应用实践',
-    subtitle: '深度使用 · 持续探索',
-    tags: ['AI工具评测', '提示词工程', '内容输出', '逻辑拆解'],
-    desc: '日常深度使用Codex、Claude等AI工具辅助方案撰写、文档整理、竞品调研和逻辑拆解。通过结构化提示词（Prompt Engineering）高效引导AI输出，探索AI在内容创作、信息分析、文档生成等工作流中的最佳实践，有丰富的实际使用场景和持续研究习惯。',
-    accent: '#06b6d4',
-    pdf: './ai-insights.html',
-    pdfLabel: 'AI工具使用心得',
-  },
-  {
-    id: 7,
     title: '牛转乾坤【彩云汇】',
     subtitle: '创新创业项目',
     tags: ['项目路演PPT', '商业计划'],
@@ -78,9 +71,39 @@ const projects = [
 
 import { useState } from 'react'
 
-export default function Projects() {
-  const [loadingPdf, setLoadingPdf] = useState(false)
+function ProjectCard({ p }) {
+  return (
+    <article className="project-card" style={{ '--accent': p.accent }}>
+      <div className="project-number">0{p.id}</div>
+      <div className="project-content">
+        <h3 className="project-title">{p.title}</h3>
+        <p className="project-subtitle">{p.subtitle}</p>
+        {p.techStack && <p className="project-tech">{p.techStack}</p>}
+        <p className="project-desc">{p.desc}</p>
+        {p.achievement && <p className="project-achievement">{p.achievement}</p>}
+        {p.pdf && (
+          <a href={p.pdf} target="_blank" rel="noopener noreferrer" className="project-pdf-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            {p.pdfLabel}
+          </a>
+        )}
+        {p.prototype && (
+          <a href={p.prototype} target="_blank" rel="noopener noreferrer" className="project-pdf-btn">
+            {p.prototypeLabel}
+          </a>
+        )}
+        <div className="project-tags">
+          {p.tags.map(tag => (
+            <span key={tag} className="project-tag">{tag}</span>
+          ))}
+        </div>
+      </div>
+      <div className="project-accent-bar" />
+    </article>
+  )
+}
 
+export default function Projects() {
   return (
     <section className="projects section" id="projects">
       <div className="section-header">
@@ -89,35 +112,17 @@ export default function Projects() {
         <p className="section-desc">我的项目实践与研究成果</p>
       </div>
 
+      <h3 className="projects-group-title">实习产出</h3>
       <div className="projects-grid">
-        {projects.map((p) => (
-          <article key={p.id} className="project-card" style={{ '--accent': p.accent }}>
-            <div className="project-number">0{p.id}</div>
-            <div className="project-content">
-              <h3 className="project-title">{p.title}</h3>
-              <p className="project-subtitle">{p.subtitle}</p>
-              {p.techStack && <p className="project-tech">{p.techStack}</p>}
-              <p className="project-desc">{p.desc}</p>
-              {p.achievement && <p className="project-achievement">{p.achievement}</p>}
-              {p.pdf && (
-                <a href={p.pdf} target="_blank" rel="noopener noreferrer" className="project-pdf-btn" onClick={() => setLoadingPdf(true)}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                  {p.pdfLabel}
-                </a>
-              )}
-              {p.prototype && (
-                <a href={p.prototype} target="_blank" rel="noopener noreferrer" className="project-pdf-btn">
-                  {p.prototypeLabel}
-                </a>
-              )}
-              <div className="project-tags">
-                {p.tags.map(tag => (
-                  <span key={tag} className="project-tag">{tag}</span>
-                ))}
-              </div>
-            </div>
-            <div className="project-accent-bar" />
-          </article>
+        {internshipProjects.map((p) => (
+          <ProjectCard key={p.id} p={p} />
+        ))}
+      </div>
+
+      <h3 className="projects-group-title">在校项目</h3>
+      <div className="projects-grid">
+        {schoolProjects.map((p) => (
+          <ProjectCard key={p.id} p={p} />
         ))}
       </div>
     </section>

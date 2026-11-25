@@ -1,9 +1,3 @@
-const stats = [
-  { value: '5人', label: '团队统筹经验' },
-  { value: '50+', label: '调研问卷与竞品分析' },
-  { value: '50+', label: '页商业计划书' },
-]
-
 export default function About() {
   return (
     <section className="about section" id="about">
@@ -64,15 +58,6 @@ export default function About() {
               <span className="exp-role">学委 · 课程信息传达与学习资料整理</span>
             </div>
           </div>
-        </div>
-
-        <div className="about-stats-col">
-          {stats.map((s, i) => (
-            <div key={i} className="stat-card">
-              <span className="stat-value">{s.value}</span>
-              <span className="stat-label">{s.label}</span>
-            </div>
-          ))}
         </div>
       </div>
     </section>
